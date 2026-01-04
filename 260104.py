@@ -1,12 +1,7 @@
-# 함수를 명확하게 사용하기 
-import math
-def circle_area(radius): 
-    result = round(radius**2*math.pi,2)
-    # float는 안쓰고 round() 함수만으로 소수점 둘째자리까지 쓰는 거 표현됨. 
-    return result
-
-# 함수밖에서 입력변수 설정 
-radius = float(input("반지름 값을 입력하세요: "))
-# 소수값도 받으려면 int형이 아니라 float형으로 받아야 한다. 
-# int()는 input()나온 문자열 중에서 정수형태만 받을 수 있다!!! 
-print(circle_area(radius))
+# 행성의 한글 이름을 입력하면 영어 이름을 반환하는 프로그램 만들기 
+planet_dict = {
+    "수성":"Mecury", "금성":"Venus",  "지구":"Earth",  "화성":"Mars", 
+     "목성":"Jupiter",  "토성":"Saturn", "천왕성":"Uranus", "해왕성":"Neptune"
+}
+planet_name = input("행성의 이름을 입력하세요: ")
+print(planet_dict[planet_name])
