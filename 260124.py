@@ -1,14 +1,14 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from datetime import datetime, timedelta
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
 
-df = pd.read_csv('your_journal.csv')  # date, main_category, initial_words, text_len, write_time 컬럼 가정
-df['date'] = pd.to_datetime(df['date'])
+# 글자수 변동
+sns.lineplot(data=period_df, x='date', y='text_len', ax=ax1)
+ax1.set_title('Text Length Over Time')
+ax1.grid(True)
 
-age_50_date = datetime(2025, 1, 1)  # 50세 되는 실제 날짜로 변경
-start_date = age_50_date - timedelta(days=180)  # 6개월 전
-end_date = age_50_date + timedelta(days=180)    # 6개월 후
+# 작성시간 (write_time을 hour로 변환 가정)
+period_df['hour'] = pd.to_datetime(period_df['write_time']).dt.hour
+sns.boxplot(data=period_df, x='weekday', y='hour', ax=ax2)  # weekday 컬럼 추가 필요
+ax2.set_title('Write Time by Weekday')
 
-period_df = df[(df['date'] >= start_date) & (df['date'] <= end_date)].copy()
-period_df.sort_values('date', inplace=True)
+plt.tight_layout()
+plt.show()
