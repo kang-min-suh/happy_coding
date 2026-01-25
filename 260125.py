@@ -1,12 +1,16 @@
-x = int(input())
-if x <= 1:
-    print('소수가 아닙니다.')
-elif x == 2: 
-    print('소수입니다.')   
-else: 
-    for i in range(2, x): 
-        if x % i == 0: 
-            print('소수가 아닙니다.')
-            break 
+# 강사님 풀이 (2번째 버전)
+%%timeit
+def check_prime(n): 
+    if n <= 1: 
+        return "NO"
+    i = 2 
+    prime = True
+    while (i**2) < n : 
+        if n % i == 0: 
+            prime = False
+            break
+        i += 1 
+    if prime: 
+        return "YES"
     else: 
-        print('소수입니다.')
+        return "NO"
