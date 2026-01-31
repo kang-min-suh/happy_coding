@@ -1,5 +1,5 @@
-s = ''
-for i in range(1, 21): 
-    s += str(i)
-s
+sum = 0 
+for i in s: 
+    sum += int(i)
 
+print(sum)
