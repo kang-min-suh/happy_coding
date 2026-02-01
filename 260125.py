@@ -11,3 +11,14 @@ people
 
 new_people = set(people)
 len(new_people)
+
+dict_people = {}
+for i in new_people: 
+    dict_people[i[1]] = i[0]
+dict_people
+len(dict_people)
+dict_people = {}
+for i in new_people: 
+    dict_people[i[1]] = i[0]
+dict_people
+len(dict_people)
