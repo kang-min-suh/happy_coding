@@ -1,24 +1,11 @@
-people = [
-    ('이호준', '01050442903'),
-    ('이호상', '01051442904'),
-    ('이준호', '01053442904'),
-    ('이호준', '01050442903'),
-    ('이준', '01050412904'),
-    ('이호', '01050443904'),
-    ('이호준', '01050442903'),         
-]
-people
+user_input = input()
+user_input = list(map(int, user_input.split()))
 
-new_people = set(people)
-len(new_people)
+def sol(l): 
+    l = sorted(l)
+    for i in range(len(l)-1): 
+        if l[i] + 1 != l[i+1]: 
+            return "NO"
+    return "YES"
 
-dict_people = {}
-for i in new_people: 
-    dict_people[i[1]] = i[0]
-dict_people
-len(dict_people)
-dict_people = {}
-for i in new_people: 
-    dict_people[i[1]] = i[0]
-dict_people
-len(dict_people)
+print(sol(user_input))
