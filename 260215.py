@@ -1,5 +1,9 @@
-q_num = 20190923
-if q_num == 20190923: 
-    print(q_num)
-else: 
-    pass
+s = 'bccdddeeeeeeeee'
+print(s.count('c'), end = '')
+print(s.count('a'), end = '')
+print(s.count('b'), end = '')
+print(s.count('e'), end = '')
+print(s.count('a'), end = '')
+print(s.count('e'), end = '')
+print(s.count('c'), end = '')
+print(s.count('d'), end = '')
