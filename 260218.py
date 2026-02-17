@@ -1,9 +1,14 @@
-input_weight = int(input())  # 정량을 입력
+value = int(input())
 
-cnt = 0
-def eli_count(input_weight): 
-    if (input_weight % 7) or (input_weight % 3) == 0: 
-        cnt += (input_weight //7) + (input_weight //3)
-        print(cnt)
-    else: 
+result = 0 
+
+while True: 
+    if value %7 == 0: 
+        result += value // 7
+        print(result)
+        break
+    value -= 3 
+    result += 1 
+    if value < 0: 
         print(-1)
+        break
