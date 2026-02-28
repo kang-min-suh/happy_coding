@@ -11,5 +11,5 @@ prime_set = set(prime_list(100))
 n = int(input())
 
 parti = []
-l = [[i, n-i] for i in range(n // 2 + 1) if i in prime_set and n-i in prime_set]
+l = [[i, n-i] for i in range(n//2 +1) if i in prime_set and n-i in prime_set]
 print(l)
