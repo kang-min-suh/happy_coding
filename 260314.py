@@ -24,12 +24,14 @@ def solution():
             if node == end: 
                 return count
 
-            for next_node in graph[node]
+            for next_node in graph[node]:
                 print(f'      graph[node]는 {graph[node]}')
                 print(f'      next_node는 {next_node}')
                 if next_node not in visited: 
                     queue.append(next_node)
                     visited.append(next_node)
+                    print(f'            visited는 {visited}')
+                    print(f'            queue는 {queue}')
 
     return count
 
