@@ -1,3 +1,6 @@
-# 첫 줄에 선택할 한글 자음이 주어집니다. 
-# 두번째 줄에 조합의 수가 주어집니다. 
-# 주어진 조합의 수에 따라 조합과 조합의 수를 출력해주세요. 
+from itertools import permutations, combinations
+user_input = input().split(',')
+user_input_int = int(input())
+
+print(list(map(''.join, combinations(user_input, user_input_int))))
+print(len(list(combinations(user_input, user_input_int))))
