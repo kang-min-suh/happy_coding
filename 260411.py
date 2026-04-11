@@ -1,12 +1,20 @@
 def math(e): 
-    count = 0
+    m = {
+        ')' : '(', 
+        '}' : '{'
+    }
+    stack = []
+
     for i in e: 
-        if i == '(': 
-            count += 1
-        elif i == ')': 
-            count -= 1
-    if count == 0: 
-        return True
-    else: 
-        return False
-    
+        if i in '({' :
+            stack.append(i)
+       
+        elif i in m: 
+            if len(stack) == 0: 
+                return False 
+            else: 
+                t = m[i]
+                if t != stack.pop() : 
+                    return False 
+    return len(stack) == 0
+
