@@ -1,4 +1,4 @@
-1
+
 2
 3
 4
@@ -7,18 +7,29 @@
 7
 8
 9
-year = int(input())
-age_type = input()
+10
+11
+12
+13
+14
+15
+start = int(input())
+before = int(input())
+after = int(input())
 
-if age_type == 
- "Korea"
-:
-    answer = 
-2030 - year +1
+money = start
+month = 1
+while money < 70:
+    money += 
+before
 
-elif age_type == "Year":
+    month += 1
+while 
+money
+ < 100:
     
-answer = 2030 - year
+money += after
 
+    month += 1
 
-print(answer)
+print(month)
