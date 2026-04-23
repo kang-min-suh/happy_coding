@@ -1,15 +1,5 @@
-struct fns {
-    int*(*fn)(int*); 
-} mine; 
+a = list(range(10))
 
-int* dummy(int *d) {
-    return d+1; 
-}
-
-int main() {
-    struct fns mine; 
-    int n[] = {16, 32}; 
-    mine.fn = dummy; 
-    printtf("%x", *mine.fin(n)); 
-    return 0; 
-}
+for i in a[::-2]: 
+    print(i, end = 'A')
+print()
