@@ -1,8 +1,8 @@
-def f(a): 
-    m = [[x] for x in a]
-    b = m[:]
-    for i in rang(len(b)-1): 
-        b[1+i] += b[i]
-    result = sum([len(x) for x in m])
-    return result 
-print(f([1, 2, 3, 4]))
+s = input("입력:") # 입력: HumanDev
+
+x = []
+for i in s.split(): 
+    x.append(i[::-1])
+y = ' '.join(x)
+z = ''.join([c for c in y if c not in 'ong'])
+print(z)
