@@ -1,8 +1,14 @@
-def f(a): 
-    m = [[x] for x in a]
-    b = m[:]
-    for i in range(len(b)-1): 
-        b[1+i] += b[i]
-    result = sum([[len(x) for x in m]])
-    return result 
-print(f([1, 2, 3, 4]))
+아스키코드 기억 팁 (정처기용)
+실기에서 도움 되는 것만 정리해보면:
+
+대문자 A: 65
+
+소문자 a: 97
+
+대문자 Z: 90
+
+소문자 z: 122
+
+숫자 0: 48
+
+공백(띄어쓰기): 32
