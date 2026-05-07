@@ -1,12 +1,9 @@
-아스키코드 기억 팁 (정처기용)
-실기에서 도움 되는 것만 정리해보면:
+>> 구축13
+* 데이터베이스 이중화(Database Replication) <-- 장애시 계속 서비스 (Master(주) - Slave(종)) 
 
-대문자 A: 65
+* Failover: 대체작동, 또는 장애 극복을 위하여 예비시스템으로 자동전환되는 기능 
 
-소문자 a: 97
-
-대문자 Z: 90
-
-소문자 z: 122
-
-숫자 0: 48
+* 스토리지(Storage) 
+1. DAS(Direct Attach Storage) <-- 소규모 
+2. NAS(Network Attached Storage) <--  중규모 
+3. SAN <-- 전용 네트워크를 별도로 구성, 대규모 시스템에 적합 
